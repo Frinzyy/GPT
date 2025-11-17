@@ -1,10 +1,8 @@
 a = (30 - 3) // 3
 
 b = []
-c = 0
-for m in range (1, a+2): # bei a addieren wir erste eins weil c mit 0 anfangt, zweite für letzte index, damit 30 auch einschließlich ist.
-  c += 3
-  b += [c]
+for i in range(0, 31, 3):
+  b += [i]
 
 print(b)
 
@@ -18,4 +16,5 @@ for s in range (0, k):
 
 print(b)
 """Without to create a new array, it should be alooklike this"""
+
 
