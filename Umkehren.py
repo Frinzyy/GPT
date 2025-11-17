@@ -9,7 +9,7 @@ for m in range (1, a+2): # bei a addieren wir erste eins weil c mit 0 anfangt, z
 print(b)
 
 k = len(b)//2 
-d= -1
+d= -1 ## Die Varieble muss draußen stehen, weil wenn es sich in der Schleife befinden würde, würde es immer auf -1 gesetzt werden ! Scope!!
 for s in range (0, k):
   zwischenspeicher = b[d]
   b[d] = b[s]
@@ -18,3 +18,4 @@ for s in range (0, k):
 
 print(b)
 """Without to create a new array, it should be alooklike this"""
+
