@@ -48,7 +48,7 @@ def linie(x0, y0, x1, y1, farbe, spalten, zeilen):
             y += sy
 
 def flaeche_dreieck(x1, y1, x2, y2, x3, y3):
-  flaeche = 1/2 * ((x1*(y2-y3)) + (x2 * (y3-y1)) + (x3 * (y1-y2)))  
+  flaeche = (1/2) * ((x1*(y2-y3)) + (x2 * (y3-y1)) + (x3 * (y1-y2)))  
   if flaeche < 0:
     flaeche = -flaeche
   return flaeche
@@ -59,7 +59,7 @@ def baryzentrische_Kordinaten(x1, y1, x2, y2, x3, y3, p1, p2):
   FA1 = flaeche_dreieck(x1, y1, x2, y2, p1, p2)
   FA2 = flaeche_dreieck(x2, y2, x3, y3, p1, p2)
   FA3 = flaeche_dreieck(x1, y1, x3, y3, p1, p2)
-  return ( FA1 / FA <= 1 and  FA2 / FA <= 1 and FA3 / FA <= 1) and ((FA1 + FA2 + FA3) / FA) == 1 
+  return (FA1 / FA <= 1 and FA2 / FA <= 1 and FA3 / FA <= 1) and (((FA1 / FA) + (FA2 / FA) + (FA3 / FA))) - 1 < 0.0001
 
 def dreieck(x1, y1, x2, y2, x3, y3, farbe, spalten, zeilen):
   for x in range(spalten):
